@@ -58,21 +58,13 @@ export default function UserPage({ user }) {
             <h2>{name}</h2>
             {isCurrentUser && (
             <Link href="/settings">
-              <button type="button">Edit</button>
+              <button type="button">Alterar suas informações</button>
             </Link>
             )}
           </div>
-          Bio
-          <p>{bio}</p>
-          Email
-          <p>
-            {email}
-          </p>
         </section>
       </div>
       <div>
-        <h3>My posts</h3>
-        <Posts creatorId={user._id} />
       </div>
     </>
   );
