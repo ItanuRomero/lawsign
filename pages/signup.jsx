@@ -53,7 +53,7 @@ const SignupPage = () => {
               id="email"
               name="email"
               type="email"
-              placeholder="Email address"
+              placeholder="Seu e-mail"
             />
           </label>
           <label htmlFor="password">
