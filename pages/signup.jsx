@@ -34,10 +34,10 @@ const SignupPage = () => {
   return (
     <>
       <Head>
-        <title>Sign up</title>
+        <title>Cadastro</title>
       </Head>
       <div>
-        <h2>Sign up</h2>
+        <h2>Cadastro</h2>
         <form onSubmit={handleSubmit}>
           {errorMsg ? <p style={{ color: 'red' }}>{errorMsg}</p> : null}
           <label htmlFor="name">
@@ -64,7 +64,7 @@ const SignupPage = () => {
               placeholder="Create a password"
             />
           </label>
-          <button type="submit">Sign up</button>
+          <button type="submit">Cadastro</button>
         </form>
         <p style={{ color: '#777', textAlign: 'center' }}>
           Note: The database is public. For your privacy,

@@ -8,7 +8,7 @@ export default function EmailVerifyPage({ success }) {
   return (
     <>
       <Head>
-        <title>Sign up</title>
+        <title>Cadastro</title>
       </Head>
       <style jsx>
         {`
