@@ -21,12 +21,12 @@ const IndexPage = () => {
       </style>
       <div style={{ marginBottom: '2rem' }}>
         <h2>
-          Hello,
+          Olá,
           {' '}
           {user ? user.name : 'stranger'}
           !
         </h2>
-        <p>Have a wonderful day.</p>
+        <p>Pronto para assinar seus documentos?</p>
       </div>
       <div>
       </div>
