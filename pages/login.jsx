@@ -35,9 +35,9 @@ const LoginPage = () => {
   return (
     <>
       <Head>
-        <title>Sign in</title>
+        <title>Acessar</title>
       </Head>
-      <h2>Sign in</h2>
+      <h2>Acessar</h2>
       <form onSubmit={onSubmit}>
         {errorMsg ? <p style={{ color: 'red' }}>{errorMsg}</p> : null}
         <label htmlFor="email">
@@ -56,7 +56,7 @@ const LoginPage = () => {
             placeholder="Password"
           />
         </label>
-        <button type="submit">Sign in</button>
+        <button type="submit">Acessar</button>
         <Link href="/forget-password">
           <a>Forget password</a>
         </Link>

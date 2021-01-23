@@ -153,7 +153,7 @@ export default function Layout({ children }) {
             {!user ? (
               <>
                 <Link href="/login">
-                  <a>Sign in</a>
+                  <a>Acessar</a>
                 </Link>
                 <Link href="/signup">
                   <a>Cadastro</a>

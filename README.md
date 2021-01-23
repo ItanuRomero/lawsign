@@ -32,7 +32,7 @@ An [**Next.js**](https://github.com/zeit/next.js/) and [**MongoDB**](https://www
 <sup>*without passportjs*: [`a1747b7`](https://github.com/hoangvvo/nextjs-mongodb-app/commit/c36c5826f691032803760b5404ccec3446575504) *with passportjs*: `master`</sup>
 
 - [x] Session-based authentication
-- [x] Cadastro/Sign in/Sign out API
+- [x] Cadastro/Acessar/Logout API
 - [x] Authentication via email/password
 - [ ] Authentication via OAuth (Google, Facebook, etc.)
 - [x] Email verification
