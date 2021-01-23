@@ -61,7 +61,7 @@ const SignupPage = () => {
               id="password"
               name="password"
               type="password"
-              placeholder="Create a password"
+              placeholder="Insira sua senha"
             />
           </label>
           <button type="submit">Cadastro</button>

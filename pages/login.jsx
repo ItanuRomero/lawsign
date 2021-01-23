@@ -45,7 +45,7 @@ const LoginPage = () => {
             id="email"
             type="email"
             name="email"
-            placeholder="Email address"
+            placeholder="Seu e-mail"
           />
         </label>
         <label htmlFor="password">
@@ -58,7 +58,7 @@ const LoginPage = () => {
         </label>
         <button type="submit">Acessar</button>
         <Link href="/forget-password">
-          <a>Forget password</a>
+          <a>Esqueceu a senha?</a>
         </Link>
       </form>
     </>
