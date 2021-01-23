@@ -81,16 +81,16 @@ const ProfileSection = () => {
         <title>Settings</title>
       </Head>
       <section>
-        <h2>Edit Profile</h2>
+        <h2>Seu cadastro</h2>
         {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
         <form onSubmit={handleSubmit}>
           {!user.emailVerified ? (
             <p>
-              Your email has not been verify.
+              Seu e-mail ainda não foi verificado.
               {' '}
               {/* eslint-disable-next-line */}
                 <a role="button" onClick={sendVerificationEmail}>
-                  Send verification email
+                  Verificar e-mail
                 </a>
             </p>
           ) : null}
@@ -125,7 +125,7 @@ const ProfileSection = () => {
               ref={profilePictureRef}
             />
           </label>
-          <button disabled={isUpdating} type="submit">Save</button>
+          <button disabled={isUpdating} type="submit">Salvar</button>
         </form>
         <form onSubmit={handleSubmitPasswordChange}>
           <label htmlFor="oldpassword">
