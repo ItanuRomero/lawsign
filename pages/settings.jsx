@@ -101,7 +101,7 @@ const ProfileSection = () => {
               id="name"
               name="name"
               type="text"
-              placeholder="Your name"
+              placeholder="Seu nome"
               ref={nameRef}
             />
           </label>

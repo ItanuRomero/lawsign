@@ -45,7 +45,7 @@ const SignupPage = () => {
               id="name"
               name="name"
               type="text"
-              placeholder="Your name"
+              placeholder="Seu nome"
             />
           </label>
           <label htmlFor="email">
@@ -66,10 +66,6 @@ const SignupPage = () => {
           </label>
           <button type="submit">Cadastro</button>
         </form>
-        <p style={{ color: '#777', textAlign: 'center' }}>
-          Note: The database is public. For your privacy,
-          please avoid using your personal, work email.
-        </p>
       </div>
     </>
   );
