@@ -106,12 +106,12 @@ const ProfileSection = () => {
             />
           </label>
           <label htmlFor="bio">
-            Bio
+          Fale um pouco mais sobre você
             <textarea
               id="bio"
               name="bio"
               type="text"
-              placeholder="Bio"
+              placeholder="Fale um pouco mais sobre você"
               ref={bioRef}
             />
           </label>
