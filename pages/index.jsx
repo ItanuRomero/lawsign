@@ -24,7 +24,6 @@ const IndexPage = () => {
           Olá,
           {' '}
           {user ? user.name : 'sejam bem-vindos!'}
-          !
         </h2>
         <p>Pronto para assinar seus documentos?</p>
       </div>

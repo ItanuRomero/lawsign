@@ -193,7 +193,7 @@ export default function Layout({ children }) {
           .
         </p>
         <p>
-          Source code is on
+          Código-fonte está no
           {' '}
           <a href="https://github.com/hoangvvo/nextjs-mongodb-app">Github</a>
           .
