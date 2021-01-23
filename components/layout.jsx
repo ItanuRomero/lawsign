@@ -177,7 +177,7 @@ export default function Layout({ children }) {
       <main>{children}</main>
       <footer>
         <p>
-          Made with
+          Feito com
           {' '}
           <span role="img" aria-label="Love">
             ❤️
@@ -187,9 +187,9 @@ export default function Layout({ children }) {
           <span role="img" aria-label="Fire">
             🔥
           </span>
-          , and a keyboard by
+          , por
           {' '}
-          <a href="https://hoangvvo.com/">Hoang Vo</a>
+          <a href="https://hoangvvo.com/">Leon</a>
           .
         </p>
         <p>
