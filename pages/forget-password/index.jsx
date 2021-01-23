@@ -27,9 +27,9 @@ const ForgetPasswordPage = () => {
   return (
     <>
       <Head>
-        <title>Forget password</title>
+        <title>Esqueceu a senha?</title>
       </Head>
-      <h2>Forget password</h2>
+      <h2>Esqueceu a senha?</h2>
       {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
       <form onSubmit={handleSubmit}>
         <p>Do not worry. Simply enter your email address below.</p>
