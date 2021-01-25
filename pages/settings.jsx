@@ -129,7 +129,7 @@ const ProfileSection = () => {
         </form>
         <form onSubmit={handleSubmitPasswordChange}>
           <label htmlFor="oldpassword">
-            Old Password
+            Senha antiga
             <input
               type="password"
               name="oldPassword"
@@ -138,7 +138,7 @@ const ProfileSection = () => {
             />
           </label>
           <label htmlFor="newpassword">
-            New Password
+            Nova senha
             <input
               type="password"
               name="newPassword"
@@ -146,7 +146,7 @@ const ProfileSection = () => {
               required
             />
           </label>
-          <button type="submit">Change Password</button>
+          <button type="submit">Mudar senha</button>
         </form>
       </section>
     </>
@@ -159,13 +159,13 @@ const SettingPage = () => {
   if (!user) {
     return (
       <>
-        <p>Please sign in</p>
+        <p>Acessar</p>
       </>
     );
   }
   return (
     <>
-      <h1>Settings</h1>
+      <h1>Configurações</h1>
       <ProfileSection />
     </>
   );

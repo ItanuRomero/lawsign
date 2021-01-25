@@ -32,7 +32,7 @@ const ForgetPasswordPage = () => {
       <h2>Esqueceu a senha?</h2>
       {msg.message ? <p style={{ color: msg.isError ? 'red' : '#0070f3', textAlign: 'center' }}>{msg.message}</p> : null}
       <form onSubmit={handleSubmit}>
-        <p>Do not worry. Simply enter your email address below.</p>
+        <p>Insira seu e-mail abaixo</p>
         <label htmlFor="email">
           <input
             id="email"
@@ -40,7 +40,7 @@ const ForgetPasswordPage = () => {
             placeholder="Email"
           />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Enviar</button>
       </form>
     </>
   );
