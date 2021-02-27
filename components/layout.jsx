@@ -110,14 +110,23 @@ export default function Layout({ children }) {
           main {
             padding: 1rem;
             max-width: 1040px;
+            max-height: 671.85px;
             margin: 0 auto;
+            margin-top: 100px;
+            
+            
           }
           footer {
+            justify-content: center;
             text-align: center;
             font-size: 0.8rem;
             margin-top: 1rem;
-            padding: 3rem;
             color: #888;
+
+            position: fixed;
+            bottom: 0;
+            left: 47%;
+            
           }
         `}
       </style>
