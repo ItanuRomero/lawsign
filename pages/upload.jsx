@@ -11,11 +11,6 @@ export default function uploadPage() {
    
         <style jsx global>
         {`
-          *{
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 500;
-          }
 
           .pageUpload-container{
             margin:0px;
@@ -43,6 +38,11 @@ export default function uploadPage() {
             
           }
 
+          .buttonUpload{
+            width: 170px;
+            margin-left: 110px;
+          }
+
           .buttonUpload button
           {
             background-color:rgba(114, 235, 36, 0.8);
@@ -63,8 +63,20 @@ export default function uploadPage() {
             background-color: rgba(91,189,28) ;
           }
 
+          .pdfUpload{
+            margin-left: 95px;
+          }
+
           .pdfUpload img{
             grid-area: "pdfUpload";
+          }
+
+          .elementsUpload{
+            margin-left: 100px;
+          }
+
+          .elementsUpload .textUpload{
+            margin-left: 40px;
           }
    
           .elementsUpload .textUpload p {
@@ -74,11 +86,11 @@ export default function uploadPage() {
             font-size: 14px; 
           }
           
-          @media (max-width: 560px){
+          @media only screen and (max-device-width: 900px) and (max-device-width: 400px) and (max-device-width: 1000px){{
             .documentUpload{
+              width: 100%;
               grid-template-areas: "elementsUpload";
             }
-          }
 
           
         `}
@@ -122,9 +134,12 @@ export function helloUser(){
         .helloUserUpload p{
           font-size: 20rm;
           text-align: center;
+          margin-top: -75px;
           margin-left: 100rm;
           line-height: 3.0;
           float: center;
+
+
    
         }
    

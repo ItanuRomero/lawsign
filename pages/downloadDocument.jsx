@@ -2,8 +2,8 @@ import React, { useReducer } from 'react';
 import Head from 'next/head'
 import Layout from '@/components/layout';
 import Text from '@/components/uploadComponents/textUpload'
-import BackIcon from '@/components/uploadComponents/backIcon'
 import Link from 'next/link';
+import {FiArrowLeft} from'react-icons/fi'
 import { useCurrentUser } from '@/hooks/index';
 import {FaUserCircle} from'react-icons/fa'
 
@@ -12,62 +12,51 @@ export default function downloadDocument(){
         <div className="downloadPDF-container">
             <style jsx>
             {`
-                @media only screen and (max-device-width: 900px) and (max-device-width: 400px) and (max-device-width: 1000px){
-                    .downloadPDF-container{ width:100%; } 
-                    .content { width:100%; }
-                    .validatedDocument { width:100%; }
-                    .partsOfDocument { width:100%; }
-                    .validatedDocument h3 { width:50%; }
-                    .downloadButton button { width:100%; }
-                    .assinantsOfDocument { width:100%; }
-                    .infoDocument { width:100%; }
-               
-               }
-               .main{
-                   margin-bottom: 15px;
-               }
-                .downloadPDF-container{
+                .content{
                     background-color:rgba(0, 0, 0, 0.1);                  
                     border-radius: 12px;
-                    max-height: 671.85px;
-
-                    
-                }
-
-                .content{
-                    margin-top: 100px;
+                    height: 700px;
+                    margin-top: -30px;
                     margin-bottom: 40px;
-                    margin-left: 400px;
-                    
+                           
                 }
 
                 .partsOfDocument{
-                    margin-top:30px;
+                    padding-top: 20px;
+                    padding-left: 445px;
+                }
+
+                .validatedDocument{
+                    padding-left: 390px;
+                    padding-top: 70px;
                 }
 
                 .validatedDocument h3{
+                    padding-top: 10px;
                     text-align: center;
                     background-color: white;
                     border-radius: 35px;
-                    padding-top:15px;
                     max-width: 300px;
-                    height: 70px;
+                    height: 60px;
+
+                }
+                .downloadButton{
+                    width: 240px;
+                    height: 200px;
+                    margin-left: 432px;
+                    padding-top: 20px;
 
                 }
 
                 .downloadButton button{
                     background-color:#2472EB;
-                    min-width:
-                    font-size: 18px;
+                    min-width: 40px;
+                    font-size: 17px;
                     border-radius: 25px;
-
-                    margin-top: 20px;
-
-                    padding-top: 20px;
-                    padding-bottom: 20px;
-                    padding-left: 45px;
-                    padding-right: 45px;
-                }
+    
+                    height: 60px;
+                  }
+                    
 
                 .assinantsOfDocument{
                     display: inline-block;
@@ -76,20 +65,32 @@ export default function downloadDocument(){
 
                 .infoDocument{
                     text-align: justify;
+                    margin-left: 60px;
+                    margin-top: 40px;
                 }
-
                 
-                  }
+                @media only screen and (max-device-width: 900px) and (max-device-width: 400px) and (max-device-width: 1000px){
+                   
+                    .content { width:100%; }
+                    .validatedDocument { width:100%; }
+                    .partsOfDocument { width:100%; }
+                    .validatedDocument h3 { width:50%; }
+                    .downloadButton button { width:100%; }
+                    .assinantsOfDocument { width:100%; }
+                    .infoDocument { width:100%; }         
+               }
             `}
             </style>
-            {/* {
+            {
+                backIcon()
+            }
+            {
                 textTop()
-            } */}
+            } 
             <div className="content">
-                <main>
                 <section className="validDocument">
                     <div className="partsOfDocument">
-                        <h3>Partes do documento</h3>
+                        <h3 className="title">Partes do documento</h3>
 
                         <div className="assinantsOfDocument">
                             <Link className="person-link" href="#">
@@ -113,9 +114,7 @@ export default function downloadDocument(){
                 <div className="downloadButton">
                     <button type="submit">Download do documento</button>
                 </div>
-                </main>
                 
-
             </div>
         </div>
     )
@@ -128,6 +127,9 @@ export function textTop(){
             <style jsx>
             {`
                 .textTop{
+                    padding-top: 1px;
+                    margin-top: -60px;
+                    margin-bottom: 70px;
                     color:black;
                 }
                  @media (max-width: 400px){
@@ -143,3 +145,27 @@ export function textTop(){
     )
 
 }
+
+export function backIcon(){
+    return(
+  
+        <div className="back">
+            <style jsx>
+            {`
+                .back{
+                  margin-top: -40px;
+                }
+  
+                .back .back-link{
+                  cursor: pointer;
+                }
+          
+            `}
+            </style>
+            <Link className="back-link" href="signedDocument">
+                <  FiArrowLeft size={40} color="#2472EB"/>
+            </Link>
+        </div>
+    )
+  
+  }

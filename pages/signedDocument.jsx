@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import Head from 'next/head'
 import Layout from '@/components/layout';
 import Text from '@/components/uploadComponents/textUpload'
-import BackIcon from '@/components/uploadComponents/backIcon'
+import {FiArrowLeft} from'react-icons/fi'
 import Link from 'next/link';
 import { useCurrentUser } from '@/hooks/index';
 
@@ -12,56 +12,60 @@ export default function signedDocument(){
         <div className="signedDoc-container">
             <style jsx>
             {`
-                 *{
-                    font-family: Roboto;
-                    font-style: normal;
-                    font-weight: 500;
-                }
-
-                .signedDoc-container{
-                    background-color:rgba(0, 0, 0, 0.1);
-                    max-width: 1200px;
-                    height: 720px;
-                    border-radius: 12px;
-                    margin: 0;
-
-                    display: grid;
-                    grid-template-areas: "pdfSignPreview downloadPDF";
-                    grid-column: "signeDoc-container";
-
+                 .content{
+                  background-color:rgba(0, 0, 0, 0.1);
+                  max-width: 1200px;
+                  height: 720px;
+                  border-radius: 12px;
+                  margin: 0;
+                  margin-top: -90px;
                  }
 
-                .pdfSignPreview{
-                  grid-area:"pdfSignPreview";
+                .pdfSignedPreview{
+                  width: 200px;
+                  padding-top: 20%;
+                  padding-left: 450px;
+                 }
+
+                .downloadPDF{
+                  padding-top: 200px;
+                  padding-left: 0;
                 }
+
                 .downloadPDF p{
                     text-align: center;
-                    font-size: 25px;
-                    grid-area: ""downloadPDF;
+                    font-size: 23px;
+                    // grid-area: "downloadPDF";
                 }
-
-                @media (max-width: 560px){
-                  .signedDoc-container{
-                    grid-template-areas: "pdfSignPreview";
-                  }
-                }
+                @media only screen and (max-device-width: 900px) and (max-device-width: 400px) and (max-device-width: 1000px){
+                   
+                  .content { width:100%; }
+       
+             }
             `}
-            </style>
+            </style>   
             {
+              backIcon()
+            }
+
+             {
                 signedUser()
             }
-            <section className="pdfSigned">
-                <div className="pdfSignPreview">
-                    <h1>Visualizar <br/> PDF</h1>
-                </div>
+            <div className="content">
+              <section className="pdfSigned">
+                  <div className="pdfSignedPreview">
+                      <h1>Visualizar <br/> PDF</h1>
+                  </div>
 
-                <div className="downloadPDF">
-                    <p>Aguarde a assinatura dos demais assinantes.
-                        <br/>
-                        Você poderá baixar o documento clicando <a href="#">aqui</a>
-                    </p>
-                </div>
-            </section>
+                  <div className="downloadPDF">
+                      <p>Aguarde a assinatura dos demais assinantes.
+                          <br/>
+                          Você poderá baixar o documento clicando <a href="#">aqui</a>
+                      </p>
+                  </div>
+              </section>
+            </div>
+            
         </div>
     )
 }
@@ -72,13 +76,17 @@ export function signedUser(){
       <div className="signedUser">
         <style jsx>
         {`
+
+        .signedUser{
+          padding-top: 1px;
+          margin-top: -90px;
+          margin-bottom: 100px;
+
+        }
          .signedUser p{
-            font-size: 20rm;
-            text-align: center;
-            margin-left: 100rm;
             line-height: 3.0;
-            float: center;
-  
+            text-align: center;
+            font-size: 20rm;
           }
      
           .signedUser b{
@@ -104,6 +112,30 @@ export function signedUser(){
       </div>
    
     )
+}
+
+  export function backIcon(){
+    return(
+  
+        <div className="back">
+            <style jsx>
+            {`
+                .back{
+                  margin-top: -40px;
+                }
+  
+                .back .back-link{
+                  cursor: pointer;
+                }
+          
+            `}
+            </style>
+            <Link className="back-link" href="signDocument">
+                <  FiArrowLeft size={40} color="#2472EB"/>
+            </Link>
+        </div>
+    )
+  
   }
 
   

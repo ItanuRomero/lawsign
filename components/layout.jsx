@@ -116,18 +116,16 @@ export default function Layout({ children }) {
             
             
           }
-          footer {
-            justify-content: center;
-            text-align: center;
+          footer {        
             font-size: 0.8rem;
-            margin-top: 1rem;
             color: #888;
-
-            position: fixed;
-            bottom: 0;
-            left: 47%;
+            position:absolute;
+            bottom:0;
+            width:100%;
+            left: 45%
             
-          }
+          } 
+          
         `}
       </style>
       <Head>

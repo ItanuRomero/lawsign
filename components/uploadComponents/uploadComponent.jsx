@@ -9,7 +9,9 @@ export default function uploadComponent(){
             <style jsx>
             {`
                 *{
-                    font-family: Roboto;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+                    'Helvetica Neue', sans-serif;
                     font-style: normal;
                     font-weight: 500;
                 }
@@ -18,38 +20,32 @@ export default function uploadComponent(){
                     float: left;
                 }
                 .content{
-                    background: rgba(0, 0, 0, 0.1);
+
+                    background-color:rgba(0, 0, 0, 0.1);
                     max-width: 720px;
-                    width:100%;
+                    width: 100%;
                     height: 360px;
                     border-radius: 12px;
-                    align-items: center;
+                    margin: 0;
+                    margin-top: 90px;
+                }
 
-                    position: fixed;
-                    left: 35%;
-                    top: 50%;
-                    transform: translate(-50%, -35%);
-
-                    display: grid;
-                    grid-template-areas: "pdfUpload textUpload";
-                    grid-column: "content";
+                .elementsUploaded{
+                    width: 400px;
+                    margin-left: 200px;
                 }
                 
                 .elementsUploaded .pdfUploaded{
                     display: flex;
-                    width: 50%;
-                    margin-left: 110%;
-                    image-size: 500px;
+                    width: 100%;
+                    padding-top: 35%;
                     
                 }
 
                 .elementsUploaded .textUploaded{
                     font-size: 20px;
                     margin-top: 0px;
-                    position: absolute;
-                    right: 90px;
-                    display: flex;
-                    justify-content: right;
+                    width: 100%;
                 }
 
                 @media (max-width: 800px){
@@ -83,7 +79,7 @@ export default function uploadComponent(){
                     </div>
                     
                     <div className="textUploaded">
-                        <p> Seu documento está sendo carregado</p>
+                        <p> Seu documento está sendo carregado...</p>
                     </div>
                
                 </section>
