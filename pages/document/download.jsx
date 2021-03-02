@@ -162,7 +162,7 @@ export function backIcon(){
           
             `}
             </style>
-            <Link className="back-link" href="signedDocument">
+            <Link className="back-link" href="/document/signed">
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>

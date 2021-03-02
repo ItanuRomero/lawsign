@@ -1,28 +1,39 @@
-/*import from '';
+import { nanoid } from 'nanoid';
 
-export async function getPosts(db, from = new Date(), by, limit) {
+export async function findSubUserById(db, userId) {
+  return db.collection('subUsers').findOne({
+    _id: userId,
+  }).then((user) => user || null);
+}
+
+export async function findSubUserByEmail(db, email) {
+  return db.collection('subUsers').findOne({
+    email,
+  }).then((user) => user || null);
+}
+
+export async function updateSubUserById(db, id, update) {
+  return db.collection('subUsers').findOneAndUpdate(
+    { _id: id },
+    { $set: update },
+    { returnOriginal: false },
+  ).then(({ value }) => value);
+}
+
+export async function insertSubUser(db, {
+  email, password, bio = '', name, profilePicture,
+}) {
   return db
-    .collection('posts')
-    .find({
-      // Pagination: Fetch posts from before the input date or fetch from newest
-      ...(from && {
-        createdAt: {
-          $lte: from,
-        },
-      }),
-      ...(by && { creatorId: by }),
+    .collection('subUsers')
+    .insertOne({
+      _id: nanoid(12),
+      emailVerified: false,
+      profilePicture,
+      email,
+      password,
+      name,
+      hash,
+      link_as3,
     })
-    .sort({ createdAt: -1 })
-    .limit(limit || 10)
-    .toArray();
+    .then(({ ops }) => ops[0]);
 }
-
-export async function insertPost(db, { content, creatorId }) {
-  return db.collection('posts').insertOne({
-    _id: nanoid(12),
-    content,
-    creatorId,
-    createdAt: new Date(),
-  }).then(({ ops }) => ops[0]);
-}
-*/
