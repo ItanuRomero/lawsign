@@ -40,7 +40,7 @@ export default function uploadPage() {
 
           .buttonUpload{
             width: 170px;
-            margin-left: 110px;
+            margin-left: 30px;
           }
 
           .buttonUpload button
@@ -64,11 +64,11 @@ export default function uploadPage() {
           }
 
           .pdfUpload{
-            margin-left: 95px;
+            margin-left: 50px;
           }
 
-          .pdfUpload img{
-            grid-area: "pdfUpload";
+          .pdfUpload input{
+            width: 200px;
           }
 
           .elementsUpload{
@@ -76,7 +76,7 @@ export default function uploadPage() {
           }
 
           .elementsUpload .textUpload{
-            margin-left: 40px;
+            margin-left: -20px;
           }
    
           .elementsUpload .textUpload p {
@@ -101,7 +101,7 @@ export default function uploadPage() {
         <div className="content">
           <section className="documentUpload">
             <div className="pdfUpload">
-            <img src="images/pdfIcon.png" alt="Arquivo PDF"/> 
+            <input type="file" accept="application/pdf" />
             </div>
           
             <div className="elementsUpload">
