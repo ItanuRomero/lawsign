@@ -6,10 +6,10 @@ import Text from '@/components/uploadComponents/textUpload'
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import {FiArrowLeft} from'react-icons/fi'
 import Link from 'next/link';
-import './api/dropdown'
+import '../api/dropdown'
 import { useCurrentUser } from '@/hooks/index';
 
-export default function assinantsInfo(){
+export default function subcribersInfo(){
     return(
         <div className="infoPage">
             
@@ -68,11 +68,12 @@ export default function assinantsInfo(){
                     </form>
 
                     <div className="buttons">
-                        <Link className="plus-link" href="#">
+                        <Link className="plus-link" href="/#">
                             < BsFillPlusCircleFill size={30} color="#2472EB"/>
                         </Link>
-
-                        <button type="submit">Pronto!</button>
+                        <Link className="plus-link" href="/subscribers/viewInfo">
+                        <button  type="submit">Pronto!</button>
+                        </Link>
                     </div>
 
                     
@@ -100,7 +101,7 @@ export function backIcon(){
           
             `}
             </style>
-            <Link className="back-link" href="quantityAssinants">
+            <Link className="back-link" href="/subscribers/quantSubscribers">
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>

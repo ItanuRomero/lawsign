@@ -79,7 +79,7 @@ export default function uploadComponent(){
                     </div>
                     
                     <div className="textUploaded">
-                        <p> Seu documento está sendo carregado...</p>
+                        <p> Seu documento foi carregado!! </p>
                     </div>
                
                 </section>

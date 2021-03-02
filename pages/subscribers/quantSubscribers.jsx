@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { useCurrentUser } from '@/hooks/index';
 
 
-export default function selectAssinants(){
+export default function selectSubscribers(){
     return(
         <div className="quantityPage">
             
@@ -34,7 +34,17 @@ export default function selectAssinants(){
                     margin-top: -25%;
                     margin-left: 65%;
                 }
-                
+                .confirm {
+                    background-color:#2472EB;
+                    font-size: 17px;
+                    border-radius: 25px;
+
+                    margin-top: 20px;
+                    margin-left: 55px;
+
+                    height: 38px;
+                    width: 140px;
+                }
                 /*Styling Selectbox*/
                 .dropdown {
                     width: 300px;
@@ -134,10 +144,15 @@ export default function selectAssinants(){
                             <li id="ten">10</li>
                         </ul>
                     </div>
-                
+                <Link className="confirm" href="/subscribers/info">
+                    <button type="submit">Pronto!</button>
+                </Link>
                 <span className="msg"></span>
+                
                 </div>
                 
+                
+
             </div>
 
         </div>
@@ -163,7 +178,7 @@ export function backIcon(){
           
             `}
             </style>
-            <Link className="back-link" href="isAssinant">
+            <Link className="back-link" href="/subscribers/isSubscriber">
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>

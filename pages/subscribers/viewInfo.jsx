@@ -3,11 +3,11 @@ import Head from 'next/head'
 import Layout from '@/components/layout';
 import Upload from '@/components/uploadComponents/uploadComponent'
 import Text from '@/components/uploadComponents/textUpload'
-import {FiArrowLeft} from'react-icons/fi'
+import {FiArrowLeft} from 'react-icons/fi'
 import Link from 'next/link';
 import { useCurrentUser } from '@/hooks/index';
 
-export default function viewInfoAssinants(){
+export default function viewSubscriberInfo(){
     return(
         <div className="viewInfoPage">
             {
@@ -48,9 +48,11 @@ export default function viewInfoAssinants(){
                            </div>
                    </form>
 
-                   <div className="signDoc">
-                   <button type="submit">Assinar o Documento</button>
-                </div>
+                    <div className="signDoc">
+                        <Link className="signDocument" href="/document/sign">
+                        <button type="submit">Assinar o Documento</button>
+                        </Link>
+                    </div>
             </div>
         </div>
     )
@@ -72,7 +74,7 @@ export function backIcon(){
           
             `}
             </style>
-            <Link className="back-link" href="isAssinant">
+            <Link className="back-link" href="/subscribers/info">
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>

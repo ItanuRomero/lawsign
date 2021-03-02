@@ -57,7 +57,9 @@ export default function signDocument(){
                 </div>
 
                 <div className="signDoc">
-                   <button type="submit">Assinar o Documento</button>
+                  <Link className="signDocument" href="/document/signed">
+                    <button type="submit">Assinar o Documento</button>
+                  </Link>
                 </div>
             </section>
           </div>
@@ -126,7 +128,7 @@ export function backIcon(){
         
           `}
           </style>
-          <Link className="back-link" href="viewInfoAssinants">
+          <Link className="back-link" href="/subscribers/viewInfo">
               <  FiArrowLeft size={40} color="#2472EB"/>
           </Link>
       </div>

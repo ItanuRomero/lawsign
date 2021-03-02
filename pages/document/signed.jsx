@@ -60,7 +60,7 @@ export default function signedDocument(){
                   <div className="downloadPDF">
                       <p>Aguarde a assinatura dos demais assinantes.
                           <br/>
-                          Você poderá baixar o documento clicando <a href="#">aqui</a>
+                          Você poderá baixar o documento clicando <Link className="downloadPDFLink" href="/document/download">aqui</Link>
                       </p>
                   </div>
               </section>
@@ -130,7 +130,7 @@ export function signedUser(){
           
             `}
             </style>
-            <Link className="back-link" href="signDocument">
+            <Link className="back-link" href="/document/sign">
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>

@@ -3,11 +3,11 @@ import Head from 'next/head'
 import Layout from '@/components/layout';
 import Upload from '@/components/uploadComponents/uploadComponent';
 import Text from '@/components/uploadComponents/textUpload'
-import {FiArrowLeft} from'react-icons/fi'
+import {FiArrowLeft} from 'react-icons/fi'
 import Link from 'next/link';
 import { useCurrentUser } from '@/hooks/index';
 
-export default function isAssinant(){
+export default function isSubscriber(){
     return(
         <div className="assinantPage">
             
@@ -70,8 +70,9 @@ export default function isAssinant(){
                         <span className="checkmark"></span>
                         Não
                     </label>
-                    
+                    <Link className="isAssinantConfirm" href="/subscribers/quantSubscribers">
                     <button type="submit">Pronto!</button>
+                    </Link>
                 </form>
             </div>
             
@@ -98,7 +99,7 @@ export function backIcon(){
           
             `}
             </style>
-            <Link className="back-link" href="upload">
+            <Link className="back-link" href="/upload">
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>

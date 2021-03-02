@@ -63,12 +63,18 @@ export default function uploadPage() {
             background-color: rgba(91,189,28) ;
           }
 
-          .pdfUpload{
+          .pdfUpload {
             margin-left: 50px;
+            width: 200px;
           }
 
           .pdfUpload input{
             width: 200px;
+            border-radius: 2px;
+          }
+
+          .pdfUpload input#file-upload-button{
+            border-radius: 5px;
           }
 
           .elementsUpload{
@@ -101,16 +107,18 @@ export default function uploadPage() {
         <div className="content">
           <section className="documentUpload">
             <div className="pdfUpload">
-            <input type="file" accept="application/pdf" />
+              <input type="file" accept="application/pdf" />
             </div>
           
             <div className="elementsUpload">
               <div className="buttonUpload">
+                <Link className="buttonUpload-link" href="/subscribers/isSubscriber">
                 <button type="submit">Buscar</button>
+                </Link>
               </div>
    
               <div className="textUpload">
-                <p>O arquivo deve ter no máximo 5MB, <br/> no formato .pdf, .doc ou .docx.
+                <p>O arquivo deve ter no máximo 5MB, <br/> no formato .pdf
                 </p>
               </div> 
                 
