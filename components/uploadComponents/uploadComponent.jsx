@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import {FaFilePdf} from'react-icons/fa'
 import { useCurrentUser } from '@/hooks/index';
 
 export default function uploadComponent(){
@@ -38,8 +39,8 @@ export default function uploadComponent(){
                 .elementsUploaded .pdfUploaded{
                     display: flex;
                     width: 100%;
-                    padding-top: 35%;
-                    
+                    padding-top: 30%;
+                    padding-left: 100px;
                 }
 
                 .elementsUploaded .textUploaded{
@@ -75,7 +76,9 @@ export default function uploadComponent(){
                 <section className="elementsUploaded">
 
                     <div className="pdfUploaded">
-                        <img src="#" alt="Arquivo PDF"/>
+                        <Link className="pdf-link" href="/#">
+                            < FaFilePdf size={70} color="#2472EB"/>
+                        </Link>
                     </div>
                     
                     <div className="textUploaded">

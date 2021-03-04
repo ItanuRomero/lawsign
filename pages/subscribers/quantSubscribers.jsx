@@ -115,7 +115,20 @@ export default function selectSubscribers(){
                 }
                 .dropdown .dropdown-menu li:active {
                     background-color: #e2e2e2;
-                }`}
+                }
+                
+                button{
+                    background-color:#2472EB;
+                    font-size: 17px;
+                    border-radius: 25px;
+
+                    margin-top: 55px;
+                    margin-left: 35%;
+
+                    height: 38px;
+                    width: 140px;
+                }
+                `}
                 </style>
                 {
                     backIcon()

@@ -20,7 +20,6 @@ export default function isSubscriber(){
                     margin-top: -30%;
                     margin-left: 70%;
                 }
-                }
 
                 .yesAssinant{
                     grid-area: "yesAssinant";
@@ -32,7 +31,7 @@ export default function isSubscriber(){
                     border-radius: 25px;
 
                     margin-top: 20px;
-                    margin-left: 55px;
+                    margin-left: 5px;
 
                     height: 38px;
                     width: 140px;
@@ -41,7 +40,7 @@ export default function isSubscriber(){
                 .assinant label{
                     cursor: pointer;
                     padding-bottom: 15px;
-                    margin-left: -80px;
+                    margin-left: -145px;
                     font-size: 20px;
                 }
 
