@@ -6,10 +6,14 @@ import Text from '@/components/uploadComponents/textUpload'
 import { BsFillPlusCircleFill } from "react-icons/bs";
 import {FiArrowLeft} from'react-icons/fi'
 import Link from 'next/link';
-import '../api/dropdown'
+import '../../api/dropdown'
 import { useCurrentUser } from '@/hooks/index';
+import {useRouter} from 'next/router';
 
 export default function subcribersInfo(){
+    const router = useRouter();
+    const quantSubs = Number(router.query.quantSubs);
+
     return(
         <div className="infoPage">
             
@@ -57,21 +61,16 @@ export default function subcribersInfo(){
                 <Upload/>
 
                 <div className="content">
-                   
-                    <form action="" className="formInfo">
-                            <div className="nomeAssinant">
-                                <input type="text" placeholder="Nome"/>
-                            </div>
-                            <div className="emailAssinant">
-                                <input type="email" name="emailAssinant" id="emailAssinant" placeholder="E-mail"/>    
-                            </div>
-                    </form>
 
+                    {
+                        forms(quantSubs)
+                    }
+                    
                     <div className="buttons">
                         <Link className="plus-link" href="/#">
                             < BsFillPlusCircleFill size={30} color="#2472EB"/>
                         </Link>
-                        <Link className="plus-link" href="/subscribers/viewInfo">
+                        <Link className="plus-link" href="/document/sign">
                         <button  type="submit">Pronto!</button>
                         </Link>
                     </div>
@@ -87,7 +86,6 @@ export default function subcribersInfo(){
 
 export function backIcon(){
     return(
-
         <div className="back">
             <style jsx>
             {`
@@ -105,6 +103,21 @@ export function backIcon(){
                 <  FiArrowLeft size={40} color="#2472EB"/>
             </Link>
         </div>
-    )
+    );
 
+}
+
+export function forms(numberForms) {
+    const quantityOfForms = Number(numberForms);
+    console.log(quantityOfForms);
+    return(
+        <form action="" className="formInfo">
+            <div className="nomeAssinant">
+                <input type="text" placeholder="Nome"/>
+            </div>
+            <div className="emailAssinant">
+                <input type="email" name="emailAssinant" id="emailAssinant" placeholder="E-mail"/>    
+            </div>
+        </form>
+    );
 }

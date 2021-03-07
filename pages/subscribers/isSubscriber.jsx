@@ -69,7 +69,7 @@ export default function isSubscriber(){
                         <span className="checkmark"></span>
                         Não
                     </label>
-                    <Link className="isAssinantConfirm" href="/subscribers/quantSubscribers">
+                    <Link className="isAssinantConfirm" href="/subscribers/quantSubscribers?isSub=true">
                     <button type="submit">Pronto!</button>
                     </Link>
                 </form>

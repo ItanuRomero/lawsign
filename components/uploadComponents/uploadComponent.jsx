@@ -76,7 +76,7 @@ export default function uploadComponent(){
                 <section className="elementsUploaded">
 
                     <div className="pdfUploaded">
-                        <Link className="pdf-link" href="/#">
+                        <Link className="pdf-link" href={`http://s3.amazonaws.com/doc/${encodeURIComponent('')}`}> {/* URL to the document */}
                             < FaFilePdf size={70} color="#2472EB"/>
                         </Link>
                     </div>

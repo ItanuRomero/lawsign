@@ -128,7 +128,7 @@ export function backIcon(){
         
           `}
           </style>
-          <Link className="back-link" href="/subscribers/viewInfo">
+          <Link className="back-link" href="/subscribers/info/info">
               <  FiArrowLeft size={40} color="#2472EB"/>
           </Link>
       </div>

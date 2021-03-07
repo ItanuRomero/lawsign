@@ -6,9 +6,18 @@ import Text from '@/components/uploadComponents/textUpload'
 import {FiArrowLeft} from'react-icons/fi'
 import Link from 'next/link';
 import { useCurrentUser } from '@/hooks/index';
+import {useRouter} from 'next/router';
 
 
 export default function selectSubscribers(){
+    var router = useRouter();
+    const isSubscriber = router.query.isSub
+    if (isSubscriber == "false") {
+        
+    } else {
+        console.log(isSubscriber)
+    }
+    var quantitySubscribers = 3
     return(
         <div className="quantityPage">
             
@@ -157,7 +166,7 @@ export default function selectSubscribers(){
                             <li id="ten">10</li>
                         </ul>
                     </div>
-                <Link className="confirm" href="/subscribers/info">
+                <Link className="confirm" href={`/subscribers/info/info?quantSubs=${encodeURIComponent(quantitySubscribers)}`}>
                     <button type="submit">Pronto!</button>
                 </Link>
                 <span className="msg"></span>

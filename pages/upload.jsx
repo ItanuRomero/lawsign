@@ -108,6 +108,7 @@ export default function uploadPage() {
           <section className="documentUpload">
             <div className="pdfUpload">
               <input type="file" accept="application/pdf" />
+              {/* HERE WILL BE THE AS3 API CALLER */}
             </div>
           
             <div className="elementsUpload">
